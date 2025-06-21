@@ -7,6 +7,10 @@ import type { PortfolioAnalysis } from '@/types';
 export async function analyzeAndSummarizePortfolio(
   portfolioImageDataUri: string
 ): Promise<PortfolioAnalysis> {
+  if (!process.env.GOOGLE_API_KEY) {
+    throw new Error('Google AI API key is not configured. Please set the GOOGLE_API_KEY in your .env file and restart the server.');
+  }
+
   try {
     const analysis = await analyzePortfolioImage({ portfolioImageDataUri });
 

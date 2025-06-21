@@ -12,5 +12,6 @@ if (!apiKey) {
 
 export const ai = genkit({
   plugins: [googleAI({apiKey})],
-  model: 'googleai/gemini-1.5-flash-latest',
+  // Use a model that supports multimodal inputs (image + text)
+  model: 'googleai/gemini-1.5-pro-latest',
 });
