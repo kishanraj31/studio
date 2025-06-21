@@ -11,7 +11,7 @@ export default function Home() {
             className="flex items-center gap-2 text-lg font-semibold"
           >
             <WalletCards className="h-6 w-6 text-primary" />
-            <span className="font-bold">PortfolioPilot</span>
+            <span className="font-bold">PortFI</span>
           </a>
         </nav>
       </header>
